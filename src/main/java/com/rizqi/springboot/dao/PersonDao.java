@@ -3,6 +3,7 @@ package com.rizqi.springboot.dao;
 import com.rizqi.springboot.model.Person;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface PersonDao {
@@ -15,5 +16,11 @@ public interface PersonDao {
     }
 
     List<Person> selectPersons();
+
+    int deletePerson(UUID id);
+
+    int updatePerson(UUID id, Person person);
+
+    Optional<Person> selectPersonById(UUID id);
 
 }
